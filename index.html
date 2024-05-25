@@ -33,16 +33,16 @@
       <!-- First name, Last name inputs -->
       <article class="field-container">
         <article class="column">
-          <p for="first-name">
+          <label for="first-name">
             First Name *
-          </p>
+          </label>
           <input type="text" name="first-name" id="first-name-input" class="text-input" required>
           <p class="error-text" id="first-name-error-text">This field is required</p>
         </article>
         <article class="column">
-          <p for="last-name">
+          <label for="last-name">
             Last Name *
-          </p>
+          </label>
           <input type="text" name="last-name" id="last-name-input" class="text-input" required>
           <p class="error-text" id="last-name-error-text">This field is required</p>
         </article>
@@ -50,14 +50,14 @@
 
       <!-- Email input -->
       <article class="email-container">
-        <p for="email">Email Address *</p>
+        <label for="email">Email Address *</label>
         <input type="email" name="email" id="email-input" class="text-input" required>
         <p class="error-text" id="email-error-text">Please enter a valid email address</p>
       </article>
 
       <!-- Radio inputs -->
       <article>
-        <p for="">Query Type *</p>
+        <label for="">Query Type *</label>
         <section class="field-container">
           <section class="radio-column">
             <input type="radio" name="query" id="enquiry-radio" class="radio" checked>General Enquiry</input>
@@ -70,7 +70,7 @@
       </article>
 
       <article>
-        <p for="message">Message *</p>
+        <label for="message">Message *</label>
         <textarea name="message" id="message-input" class="textarea" required></textarea>
         <p class="error-text" id="message-error-text">This field is required</p>
       </article>
