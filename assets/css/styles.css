@@ -42,7 +42,7 @@ body {
 
 .main-container {
   display: grid;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   padding: 5%;
   background-color: hsl(0, 0%, 100%);
@@ -55,18 +55,13 @@ body {
 
 label {
   display: block;
-  margin: 20px 0 10px 0;
+  margin: 0 0 10px 0;
   font-size: 16px;
 }
 
 .field-container {
   display: flex;
   flex-direction: column;
-  margin: 0 0 10px 0;
-}
-
-.email-container {
-  margin: 0 0 10px 0;
 }
 
 .text-input {
