@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <script defer src="./assets/js/scripts.js"></script>
+
+    <title>Frontend Mentor | Contact form</title>
+
+  </head>
+
+  <body>
+    <article class="success">
+      <article class="success-heading">
+        <img src="./assets/images/icon-success-check.svg" alt="" class="success-icon">
+        <p class="success-title">Message Sent!</p>
+      </article>
+      <p class="success-text">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </article>
+
+    <form action="" class="main-container">
+      <h3 class="form-heading">
+        Contact Us
+      </h3>
+
+      <!-- First name, Last name inputs -->
+      <article class="name-container">
+        <article class="column">
+          <label for="first_name">
+            First Name *
+          </label>
+          <input type="text" name="first_name" id="first_name_input" class="text-input half-span-input" required>
+          <p class="error-text" id="first_name_error_text">This field is required</p>
+        </article>
+        <article class="column">
+          <label for="last_name">
+            Last Name *
+          </label>
+          <input type="text" name="last_name" id="last_name_input" class="text-input half-span-input" required>
+          <p class="error-text" id="last_name_error_text">This field is required</p>
+        </article>
+      </article>
+
+      <!-- Email input -->
+      <article class="email-container">
+        <label for="email">Email Address *</label>
+        <input type="email" name="email" id="email_input" class="text-input full-input" required>
+        <p class="error-text" id="email_error_text">Please enter a valid email address</p>
+      </article>
+
+      <!-- Radio inputs -->
+      <section class="radio-container">
+        <label for="">Query Type *</label>
+        <section class="radio-container">
+          <section class="radio-column" id="enquiry">
+            <input type="radio" name="" id="enquiry_radio" class="radio">General Enquiry</input>
+          </section>
+          <section class="radio-column" id="request">
+            <input type="radio" name="" id="request_radio" class="radio">Support Request</input>
+          </section>
+        </section>
+        <p class="error-text" id="radio_error-text">Please select a query type</p>
+      </section>
+
+      <article class="message-container">
+        <label for="message">Message *</label>
+        <textarea name="message" id="message_input" class="textarea" required></textarea>
+        <p class="error-text" id="message_error_text">This field is required</p>
+      </article>
+
+      <article class="consent-container">
+        <article class="consent-column">
+          <input type="checkbox" name="consent" id="checkbox_input" class="consent_checkbox">
+          <p class="consent-text">I consent to being contacted by the team *</p>
+        </article>
+        <p class="error-text" id="consent_error_text">To submit this form, please consent to being contacted</p>
+      </article>
+
+      <input type="button" value="Submit" class="submit-button" onclick="submitForm()">
+    </form>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+
+</html>
