@@ -1,18 +1,16 @@
-const first_name_input = document.querySelector("#first_name_input");
-const first_name_error_text = document.querySelector("#first_name_error_text");
-const last_name_input = document.querySelector("#last_name_input");
-const last_name_error_text = document.querySelector("#last_name_error_text");
-const email_input = document.querySelector("#email_input");
-const email_error_text = document.querySelector("#email_error_text");
-const enquiry_radio = document.querySelector("#enquiry_radio");
-const enquiry = document.querySelector("#enquiry");
-const request_radio = document.querySelector("#request_radio");
-const request = document.querySelector("#request");
-const radio_error_text = document.querySelector("#radio_error_text");
-const message_input = document.querySelector("#message_input");
-const message_error_text = document.querySelector("#message_error_text");
-const checkbox_input = document.querySelector("#checkbox_input");
-const consent_error_text = document.querySelector("#consent_error_text");
+const first_name_input = document.querySelector("#first-name-input");
+const first_name_error_text = document.querySelector("#first-name-error-text");
+const last_name_input = document.querySelector("#last-name-input");
+const last_name_error_text = document.querySelector("#last-name-error-text");
+const email_input = document.querySelector("#email-input");
+const email_error_text = document.querySelector("#email-error-text");
+const enquiry_radio = document.querySelector("#enquiry-radio");
+const request_radio = document.querySelector("#request-radio");
+const radio_error_text = document.querySelector("#radio-error-text");
+const message_input = document.querySelector("#message-input");
+const message_error_text = document.querySelector("#message-error-text");
+const checkbox_input = document.querySelector("#checkbox-input");
+const consent_error_text = document.querySelector("#consent-error-text");
 const success_modal = document.querySelector("#success");
 
 function submitForm() {
@@ -38,6 +36,16 @@ function submitForm() {
   } else {
     first_name_input.style.border = "1px solid hsl(186, 15%, 59%)";
     email_error_text.style.display = "none";
+  }
+
+  if (!enquiry_radio.checked && !request_radio.checked) {
+    enquiry_radio.style.border = "1px solid hsl(0, 66%, 56%)";
+    request_radio.style.border = "1px solid hsl(0, 66%, 56%)";
+    radio_error_text.style.display = "block";
+  } else {
+    enquiry_radio.style.border = "1px solid hsl(186, 15%, 59%)";
+    request_radio.style.border = "1px solid hsl(186, 15%, 59%)";
+    radio_error_text.style.display = "none";
   }
 
   if (!message_input.value) {

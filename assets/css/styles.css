@@ -1,21 +1,18 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-@font-face {
-  src: url(../fonts/Karla-VariableFont_wght.ttf);
-  font-family: Karla;
+  font-family: "Karla";
 }
 
 body {
+  display: grid;
+  place-content: center;
   color: hsl(187, 24%, 22%);
-  font-family: Karla;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: hsl(148, 38%, 91%);
+  padding-block: 2rem;
 }
 
 .success {
@@ -44,11 +41,8 @@ body {
 }
 
 .main-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 450px;
-  padding: 20px;
+  width: 100%;
+  padding: 5%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
 }
@@ -57,29 +51,28 @@ body {
   margin: 0 0 10px 0;
 }
 
-.name-container {
+p {
+  margin: 20px 0 10px 0;
+  font-size: 16px;
+}
+
+.field-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 0 0 10px 0;
 }
 
-.column {
-  width: 49%;
-}
-
-label {
-  width: fit-content;
-  font-size: 16px;
+.email-container {
+  margin: 0 0 10px 0;
 }
 
 .text-input {
   font-family: Karla;
   font-size: 16px;
-  padding: 3px 10px;
-  margin: 5px 0 0 0;
+  width: 100%;
+  height: 50px;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 5px;
-  width: 100%;
   cursor: pointer;
 }
 
@@ -87,26 +80,11 @@ label {
   outline: none;
 }
 
-.email-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 10px 0;
-}
-
-.radio-container {
-  margin: 0 0 10px 0;
-}
-
-.radio-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0 0 0;
-}
-
 .radio-column {
-  font-size: 12px;
-  padding: 5px 10px;
-  width: 49%;
+  font-family: Karla;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -115,15 +93,19 @@ label {
   cursor: pointer;
 }
 
+#request {
+  margin: 10px 0 0 0;
+}
+
 .radio {
-  margin: 0 5px 0 0;
+  margin: 0 10px;
 }
 
 .radio:hover {
   cursor: pointer;
 }
 
-.message-container {
+.consent-container {
   display: flex;
   flex-direction: column;
   margin: 0 0 20px 0;
@@ -131,11 +113,9 @@ label {
 
 .textarea {
   font-family: Karla;
-  width: 100%;
-  height: 70px;
-  padding: 8px 15px;
   resize: none;
-  margin: 5px 0 0 0;
+  width: 100%;
+  height: 250px;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 5px;
   cursor: pointer;
@@ -145,24 +125,18 @@ label {
   outline: none;
 }
 
-.consent-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 20px 0;
-}
-
-.consent-column {
+.consent-row {
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
 
-.consent_checkbox {
+.consent-checkbox {
   cursor: pointer;
 }
 
 .consent-text {
-  font-size: 10px;
+  font-size: 16px;
   margin: 0 0 0 5px;
   cursor: pointer;
 }
@@ -172,7 +146,6 @@ label {
   color: hsl(0, 66%, 56%);
   margin: 3px 0 0 0;
   width: fit-content;
-  /* visibility: hidden; */
   display: none;
 }
 
@@ -190,16 +163,40 @@ label {
   background-color: hsl(187, 24%, 22%);
 }
 
-.attribution {
-  position: absolute;
-  bottom: 5px;
-  font-size: 11px;
-  text-align: center;
-}
+@media (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+  .main-container {
+    max-width: 60rem;
+    min-width: 40rem;
+  }
 
-@media (max-width: 475px) {
+  .field-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 49%;
+  }
+
+  .text-input {
+    height: 40px;
+  }
+
+  .radio-column {
+    height: 40px;
+    width: 49%;
+  }
+
+  .textarea {
+    height: 150px;
+  }
+
+  #request {
+    margin: 0;
+  }
 }

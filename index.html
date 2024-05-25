@@ -7,6 +7,7 @@
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
     <script defer src="./assets/js/scripts.js"></script>
 
     <title>Frontend Mentor | Contact form</title>
@@ -30,65 +31,60 @@
       </h3>
 
       <!-- First name, Last name inputs -->
-      <article class="name-container">
+      <article class="field-container">
         <article class="column">
-          <label for="first_name">
+          <p for="first-name">
             First Name *
-          </label>
-          <input type="text" name="first_name" id="first_name_input" class="text-input half-span-input" required>
-          <p class="error-text" id="first_name_error_text">This field is required</p>
+          </p>
+          <input type="text" name="first-name" id="first-name-input" class="text-input" required>
+          <p class="error-text" id="first-name-error-text">This field is required</p>
         </article>
         <article class="column">
-          <label for="last_name">
+          <p for="last-name">
             Last Name *
-          </label>
-          <input type="text" name="last_name" id="last_name_input" class="text-input half-span-input" required>
-          <p class="error-text" id="last_name_error_text">This field is required</p>
+          </p>
+          <input type="text" name="last-name" id="last-name-input" class="text-input" required>
+          <p class="error-text" id="last-name-error-text">This field is required</p>
         </article>
       </article>
 
       <!-- Email input -->
       <article class="email-container">
-        <label for="email">Email Address *</label>
-        <input type="email" name="email" id="email_input" class="text-input full-input" required>
-        <p class="error-text" id="email_error_text">Please enter a valid email address</p>
+        <p for="email">Email Address *</p>
+        <input type="email" name="email" id="email-input" class="text-input" required>
+        <p class="error-text" id="email-error-text">Please enter a valid email address</p>
       </article>
 
       <!-- Radio inputs -->
-      <section class="radio-container">
-        <label for="">Query Type *</label>
-        <section class="radio-container">
-          <section class="radio-column" id="enquiry">
-            <input type="radio" name="" id="enquiry_radio" class="radio">General Enquiry</input>
+      <article>
+        <p for="">Query Type *</p>
+        <section class="field-container">
+          <section class="radio-column">
+            <input type="radio" name="query" id="enquiry-radio" class="radio" checked>General Enquiry</input>
           </section>
           <section class="radio-column" id="request">
-            <input type="radio" name="" id="request_radio" class="radio">Support Request</input>
+            <input type="radio" name="query" id="request-radio" class="radio">Support Request</input>
           </section>
         </section>
-        <p class="error-text" id="radio_error-text">Please select a query type</p>
-      </section>
+        <p class="error-text" id="radio-error-text">Please select a query type</p>
+      </article>
 
-      <article class="message-container">
-        <label for="message">Message *</label>
-        <textarea name="message" id="message_input" class="textarea" required></textarea>
-        <p class="error-text" id="message_error_text">This field is required</p>
+      <article>
+        <p for="message">Message *</p>
+        <textarea name="message" id="message-input" class="textarea" required></textarea>
+        <p class="error-text" id="message-error-text">This field is required</p>
       </article>
 
       <article class="consent-container">
-        <article class="consent-column">
-          <input type="checkbox" name="consent" id="checkbox_input" class="consent_checkbox">
+        <article class="consent-row">
+          <input type="checkbox" name="consent" id="checkbox-input" class="consent-checkbox">
           <p class="consent-text">I consent to being contacted by the team *</p>
         </article>
-        <p class="error-text" id="consent_error_text">To submit this form, please consent to being contacted</p>
+        <p class="error-text" id="consent-error-text">To submit this form, please consent to being contacted</p>
       </article>
 
       <input type="button" value="Submit" class="submit-button" onclick="submitForm()">
     </form>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 
 </html>
