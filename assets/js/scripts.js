@@ -4,6 +4,8 @@ const last_name_input = document.querySelector("#last-name-input");
 const last_name_error_text = document.querySelector("#last-name-error-text");
 const email_input = document.querySelector("#email-input");
 const email_error_text = document.querySelector("#email-error-text");
+const enquiry = document.querySelector("#enquiry");
+const request = document.querySelector("#request");
 const enquiry_radio = document.querySelector("#enquiry-radio");
 const request_radio = document.querySelector("#request-radio");
 const radio_error_text = document.querySelector("#radio-error-text");
@@ -34,17 +36,17 @@ function submitForm() {
     email_input.style.border = "1px solid hsl(0, 66%, 56%)";
     email_error_text.style.display = "block";
   } else {
-    first_name_input.style.border = "1px solid hsl(186, 15%, 59%)";
+    email_input.style.border = "1px solid hsl(186, 15%, 59%)";
     email_error_text.style.display = "none";
   }
 
   if (!enquiry_radio.checked && !request_radio.checked) {
-    enquiry_radio.style.border = "1px solid hsl(0, 66%, 56%)";
-    request_radio.style.border = "1px solid hsl(0, 66%, 56%)";
+    enquiry.style.border = "1px solid hsl(0, 66%, 56%)";
+    request.style.border = "1px solid hsl(0, 66%, 56%)";
     radio_error_text.style.display = "block";
   } else {
-    enquiry_radio.style.border = "1px solid hsl(186, 15%, 59%)";
-    request_radio.style.border = "1px solid hsl(186, 15%, 59%)";
+    enquiry.style.border = "1px solid hsl(186, 15%, 59%)";
+    request.style.border = "1px solid hsl(186, 15%, 59%)";
     radio_error_text.style.display = "none";
   }
 
